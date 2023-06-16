@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Please log in</h1>
+  <form action="/form-processing-script" method="get">
+    <!-- action specifies the URL to which the form is submitted. For the foem to be submitted sucessfully, the script must be in the exact location you specify and must work properly. -->
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password">
+    </div>
+    <div>
+      <input type="submit" class="submit" value="Log In">
+    </div> <br>
+  </form>
+
+  <form action="mailto:israeletim4@gmail.com" method="post" novalidate autocomplete="off">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password">
+    </div>
+    <div>
+      <input type="submit" class="submit" value="Log In">
+    </div>
+  </form>
+
+  <p>
+    Please enter your username
+    <form action=""><input type="text"> and password <input type="text"></form>
+    to log in.
+  </p>
+
+  <input type="text" id="petname" size="15" maxlength="15" value="Enter Pet Name"> <br><br>
+
+  <input type="text" id="petname" size="15" maxlength="15" placeholder="Fido"> <br><br>
+
+  <input id="name" required> <br><br>
+
+  <label> Part number:
+    <input pattern="[0-9] [A-Z] {3}" name="part"
+    title="A part number is a digit followed by three uppercase letters.">
+  </label> <br><br><br>
+
+  <!-- Adding options to text field with datalist -->
+  <datalist id="game">
+    <option value="rock"></option>
+    <option value="paper"></option>
+    <option value="scissors"></option>
+    <option value="unicorn"></option>
+    <option value="sledgehammer"></option>
+  </datalist>
+  <label>
+    Your Move:
+    <input id="move" list="game">
+  </label> <br><br><br>
+
+  <label>Pick a number between 0 and 1
+    <input type="number" id="num" min="0" max="1" step="0.1" placeholder="0.5">
+  </label><br><br>
+
+  <label>Telephone:
+    <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9] {3}-[0-9]{4}">
+   </label><br><br>
+
+
+  <label>Pick a number between 1 and 10
+    <input type="number" id="num" min="1" max="10" step="1">
+  </label><br><br>
+
+
+  <label>How much do you like our product
+    <br>Not at all <input type="range" id="likes" min="0" max="5" value="4.3"> More than anything
+  </label><br><br><br><br>  
+
+  <label>When can you return the book?
+    <input type="date" id="returndate">
+  </label><br>
+
+  <label>What is your favorite color?
+    <input type="color" id="favoritecolor">
+   </label>
+   <label>Search:
+    <input type="search" id="s">
+   </label><br><br>
+
+   <label for="userpassword">Enter your password</label> <input type="password" id="userpassword" size="8" maxlength="8"><br><br><br>
+
+   <input type="submit" value="Send Form Data"><br><br>
+
+   <input type="reset" value="Clear Form"> <br><br>
+
+   <!-- To display the check box as checked, include the checked attribute -->
+   <label>Check to receive SPAM email <input type="checkbox" id="spam" checked></label><br><br>
+
+   <!-- You can group check boxes and assign them the same contro; name using the name attribute. -->
+   <p>Check all symptoms that you are experiencing:</p>
+  <label><input type="checkbox" name="symptoms" value="nausea"> Nausea</label>
+  <label><input type="checkbox" name="symptoms" value="lightheadedness">
+  Light-headedness</label>
+  <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+  <label><input type="checkbox" name="symptoms" value="headache"> Headache</label>
+
+  <!-- Creating radio button -->
+  <p>Select a color:</p>
+  <label style="display: block;"><input type="radio" name="color" value="red">
+  Red</label>
+  <label style="display: block;"><input type="radio" name="color" value="blue">
+  Blue</label>
+  <label style="display: block;"><input type="radio" name="color" value="green">
+  Green</label><br>
+
+  <!-- Using image as submit button -->
+  <input type="image" src="submit.gif" id="submitformbtn"><br><br>
+
+  <!-- Creating generic button -->
+  <input type="button" id="verify" value="verify" onclick="verifydata()"> <br><br>
+
+  <!-- Hidden form field -->
+  <input type="hidden" id="uid" value="1402"><br><br>
+
+  <!-- File upload control -->
+  <label>Please select a file for upload <input type="file" name="fileupload">
+  </label><br><br>
+
+  <!-- Simple form upload that supports file upload -->
+  <form action="/upload" enctype="multipart/form-data" method="post">
+    <input type="file" id="new_file">
+    <input type="submit">
+   </form><br>
+
+   <!-- the button created below is same as using input tag -->
+    <button type="submit"><b><i>Submit button</i></b></button><br>
+    <button type="custom"><img src="recycle.gif"></button><br>
+    <input type="submit"><br><br>
+
+    <!-- Creating large text-entry fields with textarea -->
+    <label for="question4" style="display: block;">Please comment on our customer
+      service.</label>
+      <textarea name="question4" rows="10" cols="60">Enter your answer here
+      </textarea><br><br>
+
+    <!-- Creating menus with select and option.To include scrollable list of items, just include the size attribute in the opening select tag. -->
+    <label for="location">Please pick a travel destination</label>
+    <select id="location" size="3">
+      <option>Indiana</option>
+      <option>Fuji</option>
+      <option>Timbuktu</option>
+      <option>Alaska</option>
+    </select><br><br>
+
+    <select id="courses" >
+      <option value="p101">Programming 101
+      <option value="e312">Ecomomics 312
+      <option value="pe221">Physical Education 221
+      <option value="bw499">Basket Weaving 499
+     </select><br><br>
+
+     <!-- To select an option by default, include the selected attribute in an option element.
+    */ To allow user to select more than one option, use the multiple attribute. -->
+     <select id="courses" multiple>
+        <option value="p101">Programming 101</option>
+        <option value="e312">Ecomomics 312</option>
+        <option value="pe221" selected>Physical Education 221</option>
+        <option value="bw499">Basket Weaving 499</option>
+     </select><br><br>
+  
+  <!-- Fieldset element organizes form controls into groupings that appear in the web browser. The legend element displays a caption for the fieldset. To create a fieldset element, start with the opening fieldset tag, followed by the legend element.-->
+  <fieldset>
+    <legend>Oatmeal Varieties</legend>
+    <label><input type="radio" name="applecinnamon"> Apple Cinnamon</label>
+    <label><input type="radio" name="nuttycrunch"> Nutty Crunch</label>
+    <label><input type="radio" name="brownsugar"> Brown Sugar</label >
+  </fieldset><br><br>
+
+  <!-- You can also style fieldset. -->
+  <fieldset style="
+    border: none;
+    background-color: #aaa;
+    width: 400px;
+    ">
+    <legend style="text-align: right;">Oatmeal Varieties</legend>
+    <label><input type="radio" name="applecinnamon"> Apple Cinnamon</label>
+    <label><input type="radio" name="nuttycrunch"> Nutty Crunch</label>
+    <label><input type="radio" name="brownsugar"> Brown Sugar</label >
+  </fieldset><br><br>
+
+  <!-- Changing the default form navigation -->
+  <p>
+    <label>Enter your <a href="#">name</a>
+    <input type="text" name="username" tabindex="1">
+    </label>
+   </p>
+   <p>
+    <label>Enter your <a href="#">age</a>
+    <input type="text" name="age" tabindex="2">
+    </label>
+   </p>
+   <p>
+    <input type="submit" tabindex="3">
+   </p> <br><br>
+
+   <!-- Using Access keys. They also make your form easy to navigate. -->
+    <p>What are your interests?</p>
+    <label>Sports <input type="checkbox" name="sports" accesskey="S"></label>
+    <label>Music <input type="checkbox" name="music" accesskey="M"></label>
+    <label>Television <input type="checkbox" name="tv" accesskey="T"></label> <br><br>
+
+  <!-- Creating disabled and readonly controls.
+  */ DISABLED -->
+  <label for="question42">What is the meaning of life?</label>
+  <textarea id="question42" disabled>Enter your answer here.</textarea> <br><br><br>
+  <!-- READONLY. This is not distinguished from a normal form control. -->
+  <label for="month">This month</label>
+  <input type="text" id="month" value="September" readonly> <br><br><br>
+
+  <!-- Displaying updates with progress and meter -->
+  <h1>Task Progress</h1>
+  <p>Progress task 1:
+    <progress id="prog1" value="0" max="100">0%</progress>
+  </p>
+  <p>Progress task 2:
+    <progress id="prog2" value="45" max="100">45%</progress>
+  </p>
+  <p>Progress task 3:
+    <progress id="prog3" value="98" max="100">98%</progress>
+  </p>
+
+  <!-- You csn also set the value of measurement you need with the value atrribute-->
+  <p>
+    Jetta:
+    <meter min="0" max="14.2" high="13.5" low="3" optimum="14" value="2.5">2.5
+   gallons</meter>
+    is getting low, we should get gas!
+  </p>
+  <p>
+    Tundra:
+    <meter min="0" max="22" high="20" low="5" optimum="21" value="14">14 gallons
+   </meter>
+    is okay, we don't need gas yet.
+  </p>
+  <p>
+    Vespa:
+    <meter min="0" max="5" high="4.5" low="1" optimum="4.6" value="4.7">4.7
+   gallons</meter>
+    is practically full, you just filled up!
+  </p> <br><br>
+
+  <form>
+    <p><label>Default</label> <input value="value"></p>
+    <p><label>Styled</label> <input value="value" style="border: 2px solid #000;
+      background-color: #aaa;
+      font: bold 18px Verdana;
+      padding: 4px;"></p>
+  </form> <br><br>
+
+
+  <label style="margin-right: 50px">Email:
+    <input type="email" id="address">
+  </label>
+  <label>URL
+    <input type="url" id="website">
+  </label> <br><br><br>
+
+  <!-- for multiple attribute -->
+  <input type="url" id="website" multiple> <br><br><br>
+
+  <!--For this label to support safari and iOS, you have to use a different method to achieve same result -->
+  <label>
+    Your Move:
+    <input id="move" list="game">
+  </label>
+  <datalist id="game">
+  <label>or select from a list:
+    <select name="gameoption">
+      <option value="">
+      <option>rock
+      <option>paper
+      <option>scissors
+      <option>unicorn
+      <option>sledgehammer
+    </select>
+  </label> <br><br>
+
+  
+
+   
+
+  
+
+
+
+
+
+
+</body>
+</html>
